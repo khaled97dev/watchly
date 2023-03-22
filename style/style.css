@@ -18,6 +18,7 @@ body{
 }
 .navbar-nav > li > a:hover {
     color: #06238a !important;
+    
 }
 
 
@@ -100,12 +101,6 @@ animation: scroll-tray-hero 180s linear infinite;
   resize: none;
 }
     
-    
-     
-
-
-
-
 
 
 

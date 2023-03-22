@@ -5,9 +5,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center">
-          <h3>HOME</h3>
-          <h3>FILMS</h3>
-          <h3>CONTACT</h3>
+          <a href="index.php"><h3>HOME</h3></a>
+          <a href="films.php"><h3>FILMS</h3></a>
+          <a href="contact.php"><h3>CONTACT</h3></a>
         </div>
         <div class="col-md-4 text-center">
           <a class="" href="index.php">

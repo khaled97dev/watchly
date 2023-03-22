@@ -1,6 +1,6 @@
 <div class="row">
         <div class="card col-md-3">
-            <a href="https://www.imdb.com/title/tt0800369/">
+            <a href="film.php">
                 <img class="img1" src="assets/thor.jpg" alt="">
                 <div class="title">THOR</div>
                 <div class="text">The powerful but arrogant god Thor is where he soon becomes one of their finest defenders.</div>

@@ -16,8 +16,13 @@
       <li class="nav-item">
         <a class="nav-link text-light" href="contact.php">CONTACT</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link text-light" href="login.php"><i class="bi bi-person-circle"></i></a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-light" href="logout.php"><i class="bi bi-escape"></i></a>
       </li>
     </ul>
   </div>

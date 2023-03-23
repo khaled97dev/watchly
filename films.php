@@ -118,6 +118,5 @@ a {
 <!-- FOOTER -->
 <?php include("contents/footer.php"); ?>
 
-
 </body>
 </html>

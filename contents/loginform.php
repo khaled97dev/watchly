@@ -11,7 +11,7 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                 <div class="form-connexion rounded-4 p-4">
-                    <form action="" method="post">
+                    <form action="usertrait.php" method="post">
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control rounded-3" id="floatingEmail" name="email" placeholder="Email" required>
                             <label for="floatingEmail">email</label>

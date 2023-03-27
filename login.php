@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style/style.css">
 
-    <title>CONTACT</title>
+    <title>LOGIN/INSCRIPTION</title>
 </head>
 <body style="background-color:black;">
     
@@ -70,11 +70,6 @@ session_start();
                         </div>
 
                       <input type="submit" value="Inscription" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" name="submit">
-                        <?php
-                            if (isset($_SESSION['message'])) {
-                                echo '<span class="text-white">' . $_SESSION['message'] . '</span><br>';
-                            }
-                        ?>
                     </form>
 
                 </div>

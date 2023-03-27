@@ -1,3 +1,4 @@
+<?php include "contents/get_trailer.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,12 +42,12 @@
             <div class="card">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="assets/thor.jpg" class="card-img">
+                        <img src="<?php echo $trailer['trailer_img']; ?>" class="card-img">
                     </div>
                     <div style="background-color: black;" class=" text-white col-md-8">
                         <div class=" card-body">
-                            <p  class="pp mt-4 card-title">THOR</p>
-                            <p class="card-text">The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.</p>
+                            <p  class="pp mt-4 card-title"><?php echo $trailer['trailer_name']; ?></p>
+                            <p class="card-text"><?php echo $trailer['trailer_description']; ?></p>
                             
                             <p class="mt-4 card-text"> <span> Starring:</span> Chris Hemsworth.</p>
                             <p class="card-text"> <span> Written by:</span> Jack Kirby. </p>
@@ -63,7 +64,7 @@
 		<div class="row">
 			<div class="col-md-9 mx-auto">
 				<div class="mb-4 embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=ue80QwXMRHg" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="<?php echo $trailer['trailer_url']; ?>" frameborder="0" allowfullscreen></iframe>
 	            </div>
 			</div>
 		</div>
@@ -75,6 +76,7 @@
 
 
 <!-- FOOTER -->
+<br>    
 <?php include("contents/footer.php"); ?>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

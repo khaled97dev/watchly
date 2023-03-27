@@ -112,6 +112,7 @@ a {
 <!-- NAVBAR -->
 <?php include("contents/navbar.php"); ?>
 
+<!-- CARDS -->
 <?php include("contents/cards.php"); ?>
 
 

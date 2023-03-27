@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,21 +42,19 @@
                       <label for="floatingPrenom">Password</label>
                     </div>
                     <div>
-                      <input type="submit" value="connection" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" name="submit">
+                      <input type="submit" value="Connection" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" name="submit">
                     </div>
                 </form>
                 </div>
             </div>
             <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="signin-tab">
                 <div class="form-inscription rounded-4 p-4">
-                    <form action="" method="post">
+
+
+                    <form action="contents/inscription.php" method="post">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3" id="floatingNom" name="nom" placeholder="family name" required>
-                            <label for="floatingNom">family name</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control rounded-3" id="floatingPrenom" name="prenom" placeholder="first name" required>
-                            <label for="floatingPrenom">first name</label>
+                            <input type="text" class="form-control rounded-3" id="floatingPrenom" name="fname" placeholder=" name" required>
+                            <label for="floatingPrenom">name</label>
                         </div>
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control rounded-3" id="floatingEmail" name="email" placeholder="Email" required>
@@ -63,8 +64,19 @@
                             <input type="password" class="form-control rounded-3" id="floatingMdp2" name="password" placeholder="password" required></input>
                             <label for="floatingMdp2">password</label>
                         </div>
-                        <a href="#" type="button" class="w-100 btn btn-dark rounded-3 btn-primary" name="contactus">Inscription</a>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-3" id="floatingMdp2" name="confirm_password" placeholder="password" required></input>
+                            <label for="floatingMdp2">password confirmtion</label>
+                        </div>
+
+                      <input type="submit" value="Inscription" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" name="submit">
+                        <?php
+                            if (isset($_SESSION['message'])) {
+                                echo '<span class="text-white">' . $_SESSION['message'] . '</span><br>';
+                            }
+                        ?>
                     </form>
+
                 </div>
             </div>
         </div>

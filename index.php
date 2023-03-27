@@ -30,7 +30,7 @@ session_start();
 <body style="background-color: black;">
 
 <!-- PARALLAX -->
-<!-- <div class="parallax"></div> -->
+<div class="parallax"></div>
 
 <!-- NAVBAR -->
 <?php include("contents/navbar.php"); ?>
@@ -52,7 +52,8 @@ if (isset($_SESSION['message'])) {
 <!-- FOOTER -->
 <?php include("contents/footer.php"); ?>
 
-<!-- <div class="parallax"></div> -->
+<!-- PARALLAX -->
+<div class="parallax"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

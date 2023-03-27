@@ -32,8 +32,7 @@ if(isset($_POST['submit']))
     $role_id = $user['role_id'];
 
     // Vérifier que les champs utilisateur et les données serveur correspondent
-    if ($password == $user['user_password'])
-    // (password_verify($password, $user['user_password'])) 
+    if (password_verify($password, $user['user_password'])) 
     {
         $rolestmt = $conn->prepare('SELECT * FROM users WHERE id = ?');
         $rolestmt->execute([$id]);

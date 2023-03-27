@@ -48,8 +48,9 @@
                         <div class=" card-body">
                             <p  class="pp mt-4 card-title"><?php echo $trailer['trailer_name']; ?></p>
                             <p class="card-text"><?php echo $trailer['trailer_description']; ?></p>
-                            
+                            <br>
                             <p class="mt-4 card-text"> <span> Starring:</span> Chris Hemsworth.</p>
+                            <br>
                             <p class="card-text"> <span> Written by:</span> Jack Kirby. </p>
                         </div>
                     </div>

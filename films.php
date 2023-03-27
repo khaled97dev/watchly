@@ -16,10 +16,11 @@
   -moz-box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 body{
-  font-family: 'Phudu', cursive;
+  font-family: 'Archivo Black', sans-serif;
+
 }
 
 a {

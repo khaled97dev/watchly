@@ -16,7 +16,15 @@
       <li class="nav-item">
         <a class="nav-link text-light" href="contact.php">CONTACT</a>
       </li>
-
+      <?php 
+      if(isset ($_SESSION['id_role'])){
+        if($_SESSION['id_role'] == 1) { ?> <li class="nav-item">
+          <a class="nav-link text-light" href="admin/admin.php"><i class="bi bi-pencil-square"> ADMIN</i></a>
+        </li>
+        <?php   } 
+      }
+       ?>
+     
       <li class="nav-item">
         <a class="nav-link text-light" href="login.php"><i class="bi bi-person-circle"></i></a>
       </li>
@@ -24,6 +32,7 @@
       <li class="nav-item">
         <a class="nav-link text-light" href="logout.php"><i class="bi bi-escape"></i></a>
       </li>
+      
     </ul>
   </div>
 </nav>

@@ -21,6 +21,7 @@ if(isset($_POST['submit']))
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch (Exception $e)
+    
     {
             die('Erreur : ' . $e->getMessage());
     }
@@ -40,12 +41,14 @@ if(isset($_POST['submit']))
 
       // Vérification du rôle de l'utilisateur connecté
         if ($role_id == 1) {
-          $_SESSION['message'] = 'Bonjour Administrateur, vous êtes connecté avec le compte administrateur ' . $user['user_email'];
+          $_SESSION['message'] = 'Bonjour '.$user["user_name"].', vous êtes connecté avec le mail administrateur ' . $user['user_email'];
           $_SESSION['gestion_admin'] = ' <a href="/watchly/admin.php"> Admin </a> ';
           $_SESSION['user_email'] = $_POST['email'];
           $_SESSION['user_password'] = $_POST['password'];
           $_SESSION['user_name'] = $user['user_name'];
           $_SESSION['id'] = $user['id'];
+          $_SESSION['id_role'] = $role_id;
+          
           header("Location: /watchly/index.php");
         }
 
@@ -56,6 +59,7 @@ if(isset($_POST['submit']))
           $_SESSION['user_password'] = $_POST['password'];
           $_SESSION['user_name'] = $user['user_name'];
           $_SESSION['id'] = $user['id'];
+          $_SESSION['id_role'] = $role_id;
           header("Location: /watchly/index.php");
         }}
 // Messages d'erreur
@@ -82,26 +86,6 @@ if(isset($_POST['submit']))
         exit();
  }
 
-
-    // Check if the user exists in the database and the password is correct
-//     if($stmt->rowCount() > 0) {
-//         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-//         if(password_verify($password, $user['user_password'])) {
-//             // Password is correct, log the user in
-            
-//             session_start();
-//             $_SESSION['user_id'] = $user['id'];
-//             header('Location: index.php');
-//             exit;
-//         } else {
-//             // Password is incorrect, show an error message
-//             $error = 'Incorrect email or password';
-//         }
-//     } else {
-//         // User does not exist in the database, show an error message
-//         $error = 'Incorrect email or password';
-//     }
-// } 
 
 
 ?>

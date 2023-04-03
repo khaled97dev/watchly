@@ -11,47 +11,24 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style/style.css">
     <style>
-        .parallax {
-          /* The image used */
-          background-image: url("assets/parallax.jpg");
-          /* Set a specific height */
-          min-height: 500px; 
-          /* Create the parallax scrolling effect */
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
+    
         </style>
     <title>WATCHLY</title>
 </head>
 <body style="background-color: black;">
 
-<!-- PARALLAX -->
-<div class="parallax"></div>
 
 <!-- NAVBAR -->
 <?php include("contents/navbar.php"); ?>
 
-<?php
-if (isset($_SESSION['message'])) {
-    echo '<span class="text-white ">' . $_SESSION['message'] . '</span><br>';
-}
-?>
-<!-- CAROUSEL -->
-<?php include("contents/carousel.php"); ?>
-    <br>
-<!-- SLIDER -->
-<?php include("contents/slider.php"); ?>
-<br>
-<!-- PARALLAX -->
-<?php include("contents/parallax.php"); ?>
-<br>
+<?php include("contents/contactForm.php"); ?>
+
 <!-- FOOTER -->
 <?php include("contents/footer.php"); ?>
 
-<!-- PARALLAX -->
-<div class="parallax"></div>
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-4 text-center">
           <a class="" href="index.php">
-            <img src="assets/bigblack.png" width="150" height="150" class="d-inline-block align-top" alt="">
+            <img src="/watchly/assets/bigblack.png" width="150" height="150" class="d-inline-block align-top" alt="">
           </a>
           <p class="text-center">&copy; 2023 Copyright</p>
         </div>

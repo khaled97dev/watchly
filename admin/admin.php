@@ -41,6 +41,10 @@ session_start();
                             <li>
                                 <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Actors</span></a>
                             </li>
+                            <li>
+                                <a href="/watchly/admin/favoriteList.php" class="nav-link px-0 align-middle">
+                                <i class="bi bi-star-fill"></i> <span class="ms-1 d-none d-sm-inline">My List</span> </a>
+                             </li>
                         </ul>
                     </li>
                     

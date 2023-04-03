@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +28,7 @@ body{
 
 a {
   text-decoration: none;
-  color: #000;
+  color: ;
 }
 
 .card {

@@ -1,4 +1,7 @@
-<?php include "contents/get_trailer.php"; ?>
+<?php
+session_start();
+ include "contents/get_trailer.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +55,28 @@
                             <p class="mt-4 card-text"> <span> Starring:</span> Chris Hemsworth.</p>
                             <br>
                             <p class="card-text"> <span> Written by:</span> Jack Kirby. </p>
+
+                            <?php
+                                if(isset($_SESSION['id'])) {
+                                    $user_id = $_SESSION['id'];
+                                        ?>
+                                    <form action="contents/add_favorite.php" method="POST">
+                                    <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                                    <input type="hidden" name="trailer_id" value="<?php echo $trailer['id']; ?>">
+                                    <button type="submit" class="btn btn-primary">Add to Favorites</button>
+                                      </form>
+                                      <?php
+                                } else {
+                                           ?>
+                                  
+                                  <a class="btn btn-primary" href="login.php">
+                                    Add to Favorites
+                                    </a>
+                            <?php
+                                }
+
+
+                                ?>
                         </div>
                     </div>
                 </div>

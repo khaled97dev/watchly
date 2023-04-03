@@ -41,7 +41,7 @@ if(isset($_POST['submit']))
 
       // Vérification du rôle de l'utilisateur connecté
         if ($role_id == 1) {
-          $_SESSION['message'] = 'Bonjour '.$user["user_name"].', vous êtes connecté avec le mail administrateur ' . $user['user_email'];
+          $_SESSION['message'] = 'Hello '.$user["user_name"].' The Best Admin In The World ';
           $_SESSION['gestion_admin'] = ' <a href="/watchly/admin.php"> Admin </a> ';
           $_SESSION['user_email'] = $_POST['email'];
           $_SESSION['user_password'] = $_POST['password'];
@@ -53,7 +53,7 @@ if(isset($_POST['submit']))
         }
 
           elseif ($role_id == 2) {
-          $_SESSION['message'] = 'Bonjour '.$user["user_name"].', vous êtes connecté avec le compte ' . $user['user_email'];
+          $_SESSION['message'] = 'Hello '.$user["user_name"].' The Best User In The World ';
           $_SESSION['gestion_admin'] = null;
           $_SESSION['user_email'] = $_POST['email'];
           $_SESSION['user_password'] = $_POST['password'];

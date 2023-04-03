@@ -1,7 +1,7 @@
 <?php
 session_start();
- include "contents/get_trailer.php"; ?>
-
+ include "contents/get_trailer.php"; 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,14 +29,13 @@ session_start();
         .cardd {
             box-shadow: 15px 8px 18px #E61616;
         }
-
     </style>
     <title>FILM</title>
 </head>
 <body style="background-color: rgb(0, 0, 0);">
+
 <!-- NAVBAR -->
 <?php include("contents/navbar.php"); ?>
-
 
 <!-- Movie info card -->
 <div class="container my-5">
@@ -55,7 +54,6 @@ session_start();
                             <p class="mt-4 card-text"> <span> Starring:</span> Chris Hemsworth.</p>
                             <br>
                             <p class="card-text"> <span> Written by:</span> Jack Kirby. </p>
-
                             <?php
                                 if(isset($_SESSION['id'])) {
                                     $user_id = $_SESSION['id'];
@@ -68,14 +66,11 @@ session_start();
                                       <?php
                                 } else {
                                            ?>
-                                  
                                   <a class="btn btn-primary" href="login.php">
                                     Add to Favorites
                                     </a>
                             <?php
                                 }
-
-
                                 ?>
                         </div>
                     </div>

@@ -11,20 +11,16 @@
       echo "Connection failed: " . $e->getMessage();
   }
   
-// Check if user ID is provided
 if (!isset($_GET['id'])) {
     header("Location: filmControl.php");
     exit();
 }
 
-// Get user ID from GET parameter
 $trailer_id = $_GET['id'];
 
-// Delete user from the database
 $stmt = $pdo->prepare("DELETE FROM trailer WHERE id = ?");
 $stmt->execute([$trailer_id]);
 
-// Redirect to admin page after deletion
 header("Location: filmControl.php");
 exit();
 ?>

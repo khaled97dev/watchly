@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User Management</title>
+	<title>Trailer Management</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
@@ -9,6 +9,8 @@
 
 </head>
 <body style="background-color: #457b9d;">
+
+
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -18,13 +20,13 @@
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
-                        <a href="admin.php" class="nav-link align-middle px-0">
+                        <a href="#" class="nav-link align-middle px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dashbord</span>
                         </a>
                     </li>
                     <li>
                         <a href="filmControl.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="bi bi-film"></i> <span class="ms-1 d-none d-sm-inline">Trailer</span> </a>
+                            <i class="bi bi-film"></i> <span class="ms-1 d-none d-sm-inline">Trailers</span> </a>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="filmControl.php" class="nav-link px-0"> <span class="d-none d-sm-inline">Films</span> </a>
@@ -53,10 +55,10 @@
         </div>
         <div class="col py-3">
         <div class="mt-4 container">
-		<h1 class="text-white">User Management</h1>
+		<h1 class="text-white">Trailer Management</h1>
         <div class="my-3">
-			<a href="addUser.php" class="btn btn-primary">
-				Add User
+			<a href="addTrailer.php" class="btn btn-primary">
+				Add Trailer
 			</a>
 		</div>
 		<table class="table table-dark">
@@ -64,8 +66,9 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Name</th>
-					<th scope="col">Email</th>
-					<th scope="col">Role</th>
+					<th scope="col">Description</th>
+					<th scope="col">URL</th>
+					<th scope="col">Image</th>
 					<th scope="col">Actions</th>
 				</tr>
 			</thead>
@@ -84,21 +87,23 @@
 				    echo "Connection failed: " . $e->getMessage();
 				}
 
-				// Fetch all users from the database
-				$stmt = $pdo->query("SELECT * FROM users");
-				$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+				// Fetch all trailers from the database
+				$stmt = $pdo->query("SELECT * FROM trailer");
+				$trailers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				?>
-				<?php foreach ($users as $user) { ?>
+				<?php foreach ($trailers as $trailer) { ?>
                     <tr>
-                        <td><?= $user['id'] ?></td>
-                        <td><?= $user['user_name'] ?></td>
-                        <td><?= $user['user_email'] ?></td>
-                        <td><?= ($user['role_id'] == 1) ? 'admin' : 'user' ?></td>
+                        <td><?= $trailer['id'] ?></td>
+                        <td><?= $trailer['trailer_name'] ?></td>
+                        <td><?= $trailer['trailer_description'] ?></td>
+                        <td><?= $trailer['trailer_url'] ?></td>
+                        <td><img src="<?= $trailer['trailer_img'] ?>" width="100"></td>
+                        
                         <td>
-                        <a href="editUser.php?id=<?= $user['id'] ?>" class="btn btn-sm btn-primary">
+                        <a href="editTrailer.php?id=<?= $trailer['id'] ?>" class="btn btn-sm btn-primary">
                         <i class="bi bi-pencil-square"></i>
                         </a>
-                        <a href="deleteUser.php?id=<?= $user['id'] ?>" class="btn btn-sm btn-danger">
+                        <a href="deleteTrailer.php?id=<?= $trailer['id'] ?>" class="btn btn-sm btn-danger">
                             <i class="bi bi-trash"></i>
                         </a>
 
@@ -111,6 +116,7 @@
         </div>
     </div>
 </div>
+	
 
 	
 

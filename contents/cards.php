@@ -10,7 +10,6 @@
                 <div class="title"><?php echo $trailer['trailer_name']; ?></div>
                 <div class="text"><?php echo $trailer['trailer_description']; ?></div>
                 
-            
                 <a href="#"><div class="catagory"><?php echo $trailer['category_name']; ?> <i class="fas fa-film"></i></div></a>
                
             </a>

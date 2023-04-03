@@ -21,7 +21,7 @@ $stmt = $pdo->query($sql);
 $trailers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-
+ 
 // foreach ($trailers as $trailer) {
 //     $categoryId = $trailer['category_id'];
 //     $sql = "SELECT * FROM category WHERE id = '$categoryId'";

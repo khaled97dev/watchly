@@ -14,10 +14,8 @@ session_start();
         .parallax {
           /* The image used */
           background-image: url("assets/parallax.jpg");
-        
           /* Set a specific height */
           min-height: 500px; 
-        
           /* Create the parallax scrolling effect */
           background-attachment: fixed;
           background-position: center;

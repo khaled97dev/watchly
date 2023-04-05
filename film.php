@@ -29,6 +29,22 @@ session_start();
         .cardd {
             box-shadow: 15px 8px 18px #E61616;
         }
+        .rating {
+                display: inline-block;
+                font-size: 2em;
+                }
+
+                .star {
+                cursor: pointer;
+                color: #ccc;
+                transition: color 0.2s ease-in-out;
+                }
+
+                .star:hover,
+                .star.active {
+                color: #f1c40f;
+                }
+
     </style>
     <title>FILM</title>
 </head>
@@ -72,7 +88,18 @@ session_start();
                             <?php
                                 }
                                 ?>
+                                 <div class="rating">
+                                    <span class="star" data-value="1">&#9733;</span>
+                                    <span class="star" data-value="2">&#9733;</span>
+                                    <span class="star" data-value="3">&#9733;</span>
+                                    <span class="star" data-value="4">&#9733;</span>
+                                    <span class="star" data-value="5">&#9733;</span>
+                                </div>
                         </div>
+                        
+                           
+
+
                     </div>
                 </div>
             </div>
@@ -94,12 +121,32 @@ session_start();
 
 
 
-
-
 <!-- FOOTER -->
 <br>    
 <?php include("contents/footer.php"); ?>
+<script>
+             // get all the star elements
+const stars = document.querySelectorAll('.star');
 
+// set event listeners to each star element
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    // get the value of the clicked star
+    const value = star.getAttribute('data-value');
+
+    // add active class to all the stars with a lower or equal value to the clicked star
+    stars.forEach(star => {
+      if (star.getAttribute('data-value') <= value) {
+        star.classList.add('active');
+      } else {
+        star.classList.remove('active');
+      }
+    });
+  });
+});
+
+
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

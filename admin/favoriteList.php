@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +14,9 @@
 </head>
 <body style="background-color: black ;">
 
-
-
 <?php
-session_start();
+
+
 
 $pdo = new PDO("mysql:host=localhost;dbname=watchly", "root", "");
 

@@ -34,6 +34,15 @@
         <?php   } 
       }
        ?>
+         <?php 
+      if(isset ($_SESSION['id_role'])){
+        if($_SESSION['id_role'] == 2) { ?> 
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/watchly/admin/favoriteList.php"><i class="bi bi-star-fill"></i> MY LIST</a>
+        </li>
+        <?php   } 
+      }
+       ?>
      
      
       <li class="nav-item">
